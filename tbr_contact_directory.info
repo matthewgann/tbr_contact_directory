@@ -1,0 +1,9 @@
+name = "TBR Contact Directory"
+description = "Change Department Text Field into Select List"
+dependencies[] = views
+package = "TBR"
+core = 7.x
+version = "7.x-1.0"
+project = "tbr_contact_directory"
+
+files[] = tbr_contact_directory.module

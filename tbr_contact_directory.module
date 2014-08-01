@@ -1,0 +1,47 @@
+<?php
+
+function tbr_salaries_views_api() {
+   return array(
+      'api' => 3,
+   );
+}
+
+function tbr_contact_directory_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "views_exposed_form" && $form['#id'] == "views-exposed-form-tbr-staff-directory-page" /*or $form['#id'] == "views-exposed-form-tbr-salary-data-history-page"*/) {
+    
+    $form['attribute_6']['#type'] = "select";
+    $form['attribute_6']['#size'] = null;
+    $form['attribute_6']['#options'] = array();
+	$form['attribute_6']['#options'][''] = '';
+
+	$form['attribute_6']['#options']["Academic Affairs"] = "Academic Affairs";
+	$form['attribute_6']['#options']["Organizational Effectiveness and Strategic Initiatives"] = "Organizational Effectiveness and Strategic Initiatives";
+	$form['attribute_6']['#options']["Access and Diversity"] = "Access and Diversity";
+	$form['attribute_6']['#options']["Administration"] = "Administration";
+	$form['attribute_6']['#options']["System-wide Internal Audit"] = "System-wide Internal Audit";
+	$form['attribute_6']['#options']["Systemwide Internal Audit"] = "Systemwide Internal Audit";
+	$form['attribute_6']['#options']["Business Office"] = "Business Office";
+	$form['attribute_6']['#options']["Purchasing and Contracts"] = "Purchasing and Contracts";
+	$form['attribute_6']['#options']["Business and Finance"] = "Business and Finance";
+	$form['attribute_6']['#options']["Chancellor"] = "Chancellor";
+	$form['attribute_6']['#options']["Communications"] = "Communications";
+	$form['attribute_6']['#options']["Facilities Development"] = "Facilities Development";
+	$form['attribute_6']['#options']["General Counsel"] = "General Counsel";
+	$form['attribute_6']['#options']["Human Resources"] = "Human Resources";
+	$form['attribute_6']['#options']["Information Technology"] = "Information Technology";
+	$form['attribute_6']['#options']["Information Systems"] = "Information Systems";
+	$form['attribute_6']['#options']["Community Colleges"] = "Community Colleges";
+	$form['attribute_6']['#options']["Regents Online Campu Collaborative"] = "Regents Online Campu Collaborative";
+	$form['attribute_6']['#options']["Research and Research"] = "Research and Research";
+	$form['attribute_6']['#options']["Research and Assessment"] = "Research and Assessment";
+	$form['attribute_6']['#options']["Regents Online Campus Collaborative"] = "Regents Online Campus Collaborative";
+	$form['attribute_6']['#options']["ROCC"] = "ROCC";
+	$form['attribute_6']['#options']["Regents Online Campus Colloborative"] = "Regents Online Campus Colloborative";
+	$form['attribute_6']['#options']["Academic Affairs - RODP"] = "Academic Affairs - RODP";
+	$form['attribute_6']['#options']["Tennessee Colleges of Applied Technology"] = "Tennessee Colleges of Applied Technology";
+	$form['attribute_6']['#options']["Tennessee Technology Centers"] = "Tennessee Technology Centers";
+  }  
+
+}
+
+
