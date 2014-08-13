@@ -1,6 +1,6 @@
 <?php
 
-function tbr_salaries_views_api() {
+function tbr_contact_directory_views_api() {
    return array(
       'api' => 3,
    );
